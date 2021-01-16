@@ -9,12 +9,12 @@
     </style>
 
     <div class="example-wrapper">
-        <h1>Выберите цвет который видите на экране ✅</h1>
+        <h1>Выберите цвет который видите на экране</h1>
         <br>
         <div style="width: 150px; height: 150px; background: blue;"></div>
 
         {{ form_start(q3Form) }}
-        {{ form_row(q3Form.q3, { label: 'Введите цвет', errors: true, attr: { placeholder: 'Цвет', style: 'display: grid;' }}) }}
+        {{ form_row(q3Form.question3, { label: 'Введите цвет', errors: true, attr: { placeholder: 'Цвет', style: 'display: grid;' }}) }}
         <br>
         <button type="submit" class="btn btn-success">Далее</button>
         {{ form_end(q3Form) }}

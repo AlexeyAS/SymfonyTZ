@@ -13,5 +13,3 @@ docker-compose.yaml
 /symfony/node_modules/
 /mysql
 ###< symfony/framework-bundle ###
-
-

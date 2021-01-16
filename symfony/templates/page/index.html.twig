@@ -9,12 +9,12 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Введите имя пользователя, далее выберите соответсвующий цвет ✅</h1>
+    <h1>Введите имя пользователя, далее выберите соответсвующий цвет</h1>
 
     {{ form_start(usernameForm) }}
     {{ form_row(usernameForm.username, { label: 'Введите имя пользователя', errors: true, attr: { placeholder: 'Имя' }}) }}
     <br>
-    <button type="submit" class="btn btn-success">Ввод</button>
+    <button type="submit" class="btn btn-success">Начать тест</button>
     {{ form_end(usernameForm) }}
 
     {{ errorsForm }}

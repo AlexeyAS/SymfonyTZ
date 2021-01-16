@@ -9,7 +9,7 @@
     </style>
 
     <div class="example-wrapper">
-        <h1>Выберите цвета который видите на экране ✅</h1>
+        <h1>Выберите цвета который видите на экране</h1>
         <br>
         <div style="display: flex">
             <div style="width: 150px; height: 150px; background: green;"></div>
@@ -18,7 +18,7 @@
 
 
         {{ form_start(q2Form) }}
-        {{ form_row(q2Form.q2, { label: 'Выбери цвета', errors: true, attr: { style: 'display:grid;'}}) }}
+        {{ form_row(q2Form.question2, { label: 'Выбери цвета', errors: true, attr: { style: 'display:grid;'}}) }}
         <br>
         <button type="submit" class="btn btn-success">Далее</button>
         {{ form_end(q2Form) }}

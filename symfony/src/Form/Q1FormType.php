@@ -14,9 +14,8 @@ class Q1FormType extends AbstractType
 	public function buildForm(FormBuilderInterface $builder, array $options): void
 	{
 		$builder
-			->add('q1', ChoiceType::class, [
+			->add('question1', ChoiceType::class, [
 				'choices' => array('Красный' => 'красный', 'Жёлтый' => 'жёлтый', 'Зелёный' => 'зелёный'),
-				'required' => true,
 		 		'expanded' => false,
 			]);
 	}
