@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ block('title') }}</title>
+
+
+    <!-- Bootstrap 4.5.3 -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+
+    <!-- Styles -->
+    {% block stylesheets %}
+
+    {% endblock %}
+</head>
+<body>
+<div id="app">
+    <div class="container py-4">
+        {{ block('body') }}
+    </div>
+</div>
+{% block javascripts %}
+
+{% endblock %}
+</body>
+</html>

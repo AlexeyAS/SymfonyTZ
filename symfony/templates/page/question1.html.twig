@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Вопрос1{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Выберите цвет который видите на экране ✅</h1>
+        <br>
+        <div style="width: 150px; height: 150px; background: red;"></div>
+
+        {{ form_start(q1Form) }}
+        {{ form_row(q1Form.q1, { label: 'Выбери цвет', errors: true, attr: { style: 'display:grid;'}}) }}
+        <br>
+        <button type="submit" class="btn btn-success">Далее</button>
+        {{ form_end(q1Form) }}
+
+        {{ errorsForm }}
+    </div>
+{% endblock %}
