@@ -3,22 +3,15 @@
 {% block title %}Вопрос3{% endblock %}
 
 {% block body %}
-    <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-    </style>
-
     <div class="example-wrapper">
         <h1>Выберите цвет который видите на экране</h1>
         <br>
         <div style="width: 150px; height: 150px; background: blue;"></div>
 
         {{ form_start(q3Form) }}
-        {{ form_row(q3Form.question3, { label: 'Введите цвет', errors: true, attr: { placeholder: 'Цвет', style: 'display: grid;' }}) }}
+        {{ form_row(q3Form.question3, { label: 'Введите цвет', attr: { placeholder: 'Цвет', style: 'display: grid;' }}) }}
         <br>
         <button type="submit" class="btn btn-success">Далее</button>
         {{ form_end(q3Form) }}
-
-        {{ errorsForm }}
     </div>
 {% endblock %}

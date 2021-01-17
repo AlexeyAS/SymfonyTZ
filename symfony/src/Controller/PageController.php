@@ -31,7 +31,6 @@ class PageController extends AbstractController
 		} else {
 			return $this->render('page/index.html.twig', [
 				'usernameForm' => $form->createView(),
-				'errorsForm' => $form->getErrors()
 			]);
 		}
 	}
@@ -67,13 +66,12 @@ class PageController extends AbstractController
 		$form = $this->createForm(Q2FormType::class);
 		$form->handleRequest($request);
 
-		if ($form->isSubmitted()) {
+		if ($form->isSubmitted() && $form->isValid()) {
 			$q2 = implode('_',$_POST['q2_form']['question2']);
 			return $this->redirectToRoute('question3', ['username' => $username, 'question1' => $q1, 'question2' => $q2]);
 		} else {
 			return $this->render('page/question2.html.twig', [
 				'q2Form' => $form->createView(),
-				'errorsForm' => $form->getErrors()
 			]);
 		}
 	}
@@ -98,7 +96,6 @@ class PageController extends AbstractController
 		} else {
 			return $this->render('page/question3.html.twig', [
 				'q3Form' => $form->createView(),
-				'errorsForm' => $form->getErrors()
 			]);
 		}
 	}

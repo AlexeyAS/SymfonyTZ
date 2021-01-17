@@ -15,10 +15,13 @@ class Q2FormType extends AbstractType
 		$builder
 			->add('question2', ChoiceType::class, [
 				'choices' => array('Красный' => 'красный', 'Зелёный' => 'зелёный', 'Жёлтый' => 'жёлтый', 'Синий' => 'синий'),
-				'required' => true,
 				'expanded' => true,
 				'multiple' => true,
-				'mapped' => false
+				'mapped' => false,
+				/*
+				'empty_data' => 'Choose an option',
+				'error_bubbling' => false
+				*/
 			]);
 	}
 

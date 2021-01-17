@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <title>{{ block('title') }}</title>
 
-
-    <!-- Bootstrap 4.5.3 -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-
-    <!-- Styles -->
     {% block stylesheets %}
-
+        <!-- Bootstrap 4.5.3 -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <!-- Fix -->
+        <link rel="stylesheet" href="{{ asset('css/fix.css') }}">
     {% endblock %}
 </head>
 <body>

@@ -14,7 +14,7 @@
         <div style="width: 150px; height: 150px; background: red;"></div>
 
         {{ form_start(q1Form) }}
-        {{ form_row(q1Form.question1, { label: 'Выбери цвет', errors: true, attr: { style: 'display:grid;'}}) }}
+        {{ form_row(q1Form.question1, { label: 'Выбери цвет', attr: { style: 'display:grid;'}}) }}
         <br>
         <button type="submit" class="btn btn-success">Далее</button>
         {{ form_end(q1Form) }}

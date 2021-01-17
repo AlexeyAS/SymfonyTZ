@@ -17,20 +17,19 @@ class Q3FormType extends AbstractType
 	{
 		$builder
 			->add('question3', TextType::class, [
-				//'mapped' => false,
 				'constraints' => [
 					new NotBlank([
 						'message' => 'Введите цвет',
 					]),
 					new Length([
 						'min' => 3,
-						'minMessage' => 'Имя должно содержать не менее {{ limit }} символов',
+						'minMessage' => 'Цвет должен содержать не менее {{ limit }} символов',
 						// max length allowed by Symfony for security reasons
-						'max' => 15,
-						'maxMessage' => 'Имя должно содержать не более {{ limit }} символов',
+						'max' => 25,
+						'maxMessage' => 'Цвет должен содержать не более {{ limit }} символов',
 					]),
 				],
-				'required' => true,
+				'required' => false,
 			]);
 	}
 

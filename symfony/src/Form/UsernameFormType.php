@@ -17,7 +17,7 @@ class UsernameFormType extends AbstractType
 	{
 		$builder
 			->add('username', TextType::class, [
-				//'mapped' => false,
+				//'mapped' => true,
 				'constraints' => [
 					new NotBlank([
 						'message' => 'Введите имя',
@@ -26,11 +26,11 @@ class UsernameFormType extends AbstractType
 						'min' => 3,
 						'minMessage' => 'Имя должно содержать не менее {{ limit }} символов',
 						// max length allowed by Symfony for security reasons
-						'max' => 100,
+						'max' => 20,
 						'maxMessage' => 'Имя должно содержать не более {{ limit }} символов',
 					]),
 				],
-				'required' => true,
+				'required' => false,
 			]);
 	}
 
