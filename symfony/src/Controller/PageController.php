@@ -11,6 +11,7 @@ use App\Form\UsernameFormType;
 use App\Form\Q1FormType;
 use App\Form\Q2FormType;
 use App\Form\Q3FormType;
+use Doctrine\ORM\EntityRepository;
 
 
 class PageController extends AbstractController
@@ -117,7 +118,17 @@ class PageController extends AbstractController
 		$c2 = 'зелёный_жёлтый';
 		$c3 = 'синий';
 
-		//Запись в БД
+		$data = new Page();
+		//$data = $this->getDoctrine()->getRepository(Page::class)->findAll();
+		$data->setUsername($username);
+		$data->setQuestion1($q1);
+		$data->setQuestion2($q2);
+		$data->setQuestion3($q3);
+		$data->setCreatedAt(new \DateTime());
+		$em = $this->getDoctrine()->getManager();
+		$em->persist($data);
+		$em->flush();
+
 		$result = ['name' => $username,'q1' => $q1,'q2' => $q2,'q3' => $q3];
 
 		if ($q1 == $c1){
