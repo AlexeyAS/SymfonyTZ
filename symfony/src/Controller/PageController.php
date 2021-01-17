@@ -119,7 +119,6 @@ class PageController extends AbstractController
 		$c3 = 'синий';
 
 		$data = new Page();
-		//$data = $this->getDoctrine()->getRepository(Page::class)->findAll();
 		$data->setUsername($username);
 		$data->setQuestion1($q1);
 		$data->setQuestion2($q2);
